@@ -188,7 +188,7 @@ nav ul li a:hover{
   transform:translateY(-4px);
 }
 /* =========================
-   HERO SECTION (original structure, no duplicate background)
+   HERO SECTION (original structure)
 ========================= */
 .hero{
   min-height:88vh;
@@ -291,7 +291,7 @@ nav ul li a:hover{
   object-fit:cover;
   display:block;
 }
-/* thumbnail sparkle effect (preserved) */
+/* thumbnail sparkle effect */
 .hero-card::before{
   content:'';
   position:absolute;
@@ -396,7 +396,7 @@ nav ul li a:hover{
   filter:drop-shadow(0 0 6px rgba(123,47,247,0.5));
 }
 /* =========================
-   FEATURED THUMBNAILS (STRICT 16:9 RATIO, CENTERED ON MOBILE)
+   FEATURED THUMBNAILS (STRICT 16:9 RATIO)
 ========================= */
 .thumb-grid{
   display:grid;
@@ -472,7 +472,7 @@ nav ul li a:hover{
   opacity:1;
 }
 /* =========================
-   BEFORE AFTER (UNALTERED)
+   BEFORE AFTER SECTION (UPDATED: THUMBNAIL RATIO 16:9)
 ========================= */
 .before-grid{
   display:grid;
@@ -505,24 +505,49 @@ nav ul li a:hover{
 .compare-images{
   display:grid;
   grid-template-columns:1fr auto 1fr;
-  gap:10px;
-  padding:10px;
+  gap:12px;
+  padding:16px;
   align-items:center;
 }
 .compare-images img{
   width:100%;
-  height:150px;
+  aspect-ratio:16 / 9;
   object-fit:cover;
-  border-radius:12px;
+  border-radius:14px;
+  background:#10141e;
+  display:block;
 }
 .arrow-circle{
-  width:40px;
-  height:40px;
+  width:42px;
+  height:42px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   background:linear-gradient(135deg, #7B2FF7, #A855F7);
+  flex-shrink:0;
+}
+/* responsive adjustments for before/after grid */
+@media (max-width:768px){
+  .compare-images{
+    gap:10px;
+    padding:12px;
+  }
+  .arrow-circle{
+    width:36px;
+    height:36px;
+    font-size:14px;
+  }
+}
+@media (max-width:550px){
+  .compare-images{
+    gap:8px;
+    padding:10px;
+  }
+  .arrow-circle{
+    width:32px;
+    height:32px;
+  }
 }
 /* =========================
    WHY HIRE ME (UNALTERED)
@@ -981,7 +1006,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </head>
 <body>
-<!-- GLOBAL SPARKLE BACKGROUND (covers entire page) -->
+<!-- GLOBAL SPARKLE BACKGROUND -->
 <div class="global-sparkles"></div>
 
 <!-- HEADER (EXACTLY AS ORIGINAL) -->
@@ -1001,7 +1026,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </nav>
 </header>
 
-<!-- HERO (STACKED & CENTERED + SPARKLE EFFECT ON THUMBNAIL) -->
+<!-- HERO -->
 <section class="hero">
 <div class="hero-left">
 <h1>YouTube Thumbnails <br> That Get <span>More Clicks.</span></h1>
@@ -1016,7 +1041,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <img src="https://iili.io/CHaD5sj.png" alt="thumbnail preview">
 <div class="overlay"></div>
 <div class="overlay-content">
-<h2>I'M YOUR <BR><span>THUMBNAIL</span> DESIGNER</h2>
+<div class="name">HRUSHIKESH ARETI</div>
+<h2>YOUR <span>THUMBNAIL</span> DESIGNER</h2>
 <div class="tagline">✦ Scroll‑stopping designs | CTR focused ✦</div>
 <div class="social-icons">
 <i class="fa-brands fa-meta"></i>
@@ -1030,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 
-<!-- FEATURED THUMBNAILS (RESPONSIVE) -->
+<!-- FEATURED THUMBNAILS -->
 <section class="section" id="work">
 <div class="container">
 <div class="section-title">
@@ -1048,19 +1074,19 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 
-<!-- BEFORE AFTER (UNALTERED) -->
+<!-- BEFORE AFTER (UPDATED: PROPER 16:9 THUMBNAIL RATIO) -->
 <section class="section">
 <div class="container">
 <div class="section-title"><h2>Thumbnail Redesigns (Before vs After)</h2><p>Better design. More clicks. Better results.</p></div>
 <div class="before-grid">
-<div class="before-card"><div class="before-top"><div class="before-label">BEFORE</div><div class="after-label">AFTER</div></div><div class="compare-images"><img src="before1.jpg" alt="before"><div class="arrow-circle"><i class="fa-solid fa-angle-right"></i></div><img src="after1.jpg" alt="after"></div></div>
-<div class="before-card"><div class="before-top"><div class="before-label">BEFORE</div><div class="after-label">AFTER</div></div><div class="compare-images"><img src="before2.jpg" alt="before"><div class="arrow-circle"><i class="fa-solid fa-angle-right"></i></div><img src="after2.jpg" alt="after"></div></div>
-<div class="before-card"><div class="before-top"><div class="before-label">BEFORE</div><div class="after-label">AFTER</div></div><div class="compare-images"><img src="before3.jpg" alt="before"><div class="arrow-circle"><i class="fa-solid fa-angle-right"></i></div><img src="after3.jpg" alt="after"></div></div>
+<div class="before-card"><div class="before-top"><div class="before-label">BEFORE</div><div class="after-label">AFTER</div></div><div class="compare-images"><img src="https://shorturl.at/kmu9K" alt="before"><div class="arrow-circle"><i class="fa-solid fa-angle-right"></i></div><img src="https://iili.io/CHWF90x.jpg" alt="after"></div></div>
+<div class="before-card"><div class="before-top"><div class="before-label">BEFORE</div><div class="after-label">AFTER</div></div><div class="compare-images"><img src="https://iili.io/CHWfeRV.jpg" alt="before"><div class="arrow-circle"><i class="fa-solid fa-angle-right"></i></div><img src="https://iili.io/CH7Vwva.md.png" alt="after"></div></div>
+<div class="before-card"><div class="before-top"><div class="before-label">BEFORE</div><div class="after-label">AFTER</div></div><div class="compare-images"><img src="https://iili.io/CHWgAfj.png" alt="before"><div class="arrow-circle"><i class="fa-solid fa-angle-right"></i></div><img src="https://iili.io/CH7ZWYX.png" alt="after"></div></div>
 </div>
 </div>
 </section>
 
-<!-- WHY HIRE (UNALTERED) -->
+<!-- WHY HIRE -->
 <section class="section" id="about">
 <div class="container">
 <div class="section-title"><h2>Why Creators Hire Me</h2></div>
@@ -1073,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 
-<!-- PROCESS (UNALTERED) -->
+<!-- PROCESS -->
 <section class="section" id="process">
 <div class="container">
 <div class="section-title"><h2>Simple Process</h2></div>
@@ -1091,7 +1117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 
-<!-- CTA + CONTACT (UNALTERED) -->
+<!-- CTA + CONTACT -->
 <section class="cta-section" id="contact">
 <div class="cta-left"><h2>Let's Create Thumbnails That <br><span>Grow Your Channel.</span></h2><p>Ready to increase your clicks and grow faster?</p></div>
 <div class="cta-right">
@@ -1102,7 +1128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 
-<!-- FOOTER (UNALTERED) -->
+<!-- FOOTER -->
 <footer>
 <div class="footer-left"><h2>ARTEE <span>CREATIVES</span></h2></div>
 <div class="footer-center"><p>YouTube Thumbnail Designer for Business Creators</p></div>
